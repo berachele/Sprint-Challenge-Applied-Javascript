@@ -11,14 +11,8 @@
 axios.get('https://lambda-times-backend.herokuapp.com/topics')
 .then(response => {
     console.log('repsonse of Tabs', response.data.topics)
-    // console.log(Object.values(response.data))
-    // for(let [key, value] of Object.values(response.data)){
-    //     // console.log(`${value}`)
-    //     tabParent.append(tab(value))
-    // }
-    // tabParent.append(tab(response.data.topics))
     response.data.topics.map(function(item){
-        console.log('DONT GIVE UP ON ME MA!', item)
+        // console.log('DONT GIVE UP ON ME MA!', item)
         tabParent.append(tab(item))
 
         // return response.data.topics
@@ -34,7 +28,7 @@ function tab(info){
     tab.classList.add('tab')
     tab.textContent = info
 
-    console.log('THIS IS THE TAB!!!!!!!', tab)
+    // console.log('THIS IS THE TAB!!!!!!!', tab)
     return tab
 }
 

@@ -20,10 +20,18 @@
 
 axios.get('https://lambda-times-backend.herokuapp.com/articles')
 .then(response => {
-    // console.log('response of Cards', response.data.articles)
-    // for(var elem in response.data.articles){
+    console.log('response of Cards', response.data.articles)
 
-    // }
+    // for(var element in response.data.articles){
+    for(let [key, value] of Object.entries(response.data.articles)){
+        console.log('this is the VALUE', value)
+        // articleParent.append(articles(value))
+        value.map(function(item){
+            articleParent.append(articles(item))
+
+            return value
+        })
+    }//end of for loop
 })
 .catch(error => {
     console.log('ERROR IN CARDS', error)
