@@ -24,12 +24,18 @@ function Header(myHeader) {
 //adding textContent
     date.textContent = myHeader.date
     mainHead.textContent = 'Lambda Times'
-    showTemp.textContent = showTemp.temp
+    showTemp.textContent = myHeader.temp
 
     return header
 }
 
 //create parent to attach
 const headerParent = document.querySelector('.header-container')
+const item = {
+    date: 'March 28, 2019',
+    temp: '98 F'
+}
 
-headerParent.append(Header)
+    // console.log('FUNCTION', item)
+    headerParent.append(Header(item))
+

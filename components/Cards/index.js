@@ -24,7 +24,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
 
     // for(var element in response.data.articles){
     for(let [key, value] of Object.entries(response.data.articles)){
-        console.log('this is the VALUE', value)
+        // console.log('this is the VALUE', value)
         // articleParent.append(articles(value))
         value.map(function(item){
             articleParent.append(articles(item))
