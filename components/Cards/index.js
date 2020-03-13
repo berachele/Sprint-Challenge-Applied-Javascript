@@ -20,7 +20,10 @@
 
 axios.get('https://lambda-times-backend.herokuapp.com/articles')
 .then(response => {
-    console.log(response)
+    // console.log('response of Cards', response.data.articles)
+    // for(var elem in response.data.articles){
+
+    // }
 })
 .catch(error => {
     console.log('ERROR IN CARDS', error)

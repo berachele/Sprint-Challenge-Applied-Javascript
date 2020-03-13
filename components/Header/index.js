@@ -31,3 +31,5 @@ function Header(myHeader) {
 
 //create parent to attach
 const headerParent = document.querySelector('.header-container')
+
+headerParent.append(Header)
